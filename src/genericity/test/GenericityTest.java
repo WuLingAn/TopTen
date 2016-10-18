@@ -1,5 +1,8 @@
 package genericity.test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import com.summy.enums.DreamTypeEmum;
 import com.summy.factory.SleepFactory;
 
@@ -12,6 +15,13 @@ public class GenericityTest {
 
 		box.f(SleepFactory.getInstance().CreateSleep(DreamTypeEmum.SWEETDREAM));
 
+		String conpileStr = "ui*80*-+^hjfdslk^&$%)(>:POJkoji_87";
+
+		Pattern p = Pattern.compile("[!\"\\·$%&/()=?;:_*'#+-, .   ]");
+		Matcher m = p.matcher(conpileStr);
+		conpileStr = m.replaceAll("").trim();
+
+		System.out.println(conpileStr);
 
 	}
 

@@ -21,7 +21,7 @@ public class Box<Z> {
 		this.data = data;
 	}
 
-	public <Z extends IfSleep> void f(Z x) {
+	public <W extends IfSleep> void f(W x) {
 		x.allProcessing();
 	}
 }
